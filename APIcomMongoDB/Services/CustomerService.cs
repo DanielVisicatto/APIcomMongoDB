@@ -12,7 +12,7 @@ namespace APIcomMongoDB.Services
         {
             var client = new MongoClient(settings.ConnectionString);
             var database = client.GetDatabase(settings.DatabaseName);
-            _customer = database.GetCollection<Customer>(settings.ClientCollectionName);
+            _customer = database.GetCollection<Customer>(settings.CustomerCollectionName);
         }
 
         public List<Customer> Get() => _customer.Find(c => true).ToList(); // pegando tudo sem filtro algum.

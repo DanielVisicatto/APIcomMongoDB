@@ -2,7 +2,7 @@
 {
     public interface IProjAPIcomMongoSettings
     {
-        string ClientCollectionName { get; set; }
+        string CustomerCollectionName { get; set; }
         string ConnectionString { get; set; }
         string DatabaseName { get; set; }
     }
